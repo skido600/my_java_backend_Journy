@@ -1,71 +1,62 @@
 public class Type {
     public static void main(String[] args) {
-        stringDemo();
-        numberDemo();
-        booleanDemo();
-        charDemo();
+        stringdemo();
+        numberdemo();
     }
 
-    // ===== STRING METHODS =====
-    public static void stringDemo() {
-        String name = "Leo Wave";
-        System.out.println("Original: " + name);
-        System.out.println("Length: " + name.length());
-        System.out.println("Uppercase: " + name.toUpperCase());
-        System.out.println("Lowercase: " + name.toLowerCase());
-        System.out.println("Substring(0,3): " + name.substring(0, 3));
-        System.out.println("Contains 'Wave': " + name.contains("Wave"));
-        System.out.println("Replace 'Leo' with 'Mr': " + name.replace("Leo", "Mr"));
-        System.out.println("Trim example: '" + "  Hello  ".trim() + "'");
-        System.out.println("Equals 'leo wave': " + name.equals("leo wave"));
-        System.out.println("EqualsIgnoreCase 'leo wave': " + name.equalsIgnoreCase("leo wave"));
-        System.out.println("Split example:");
-        String[] parts = name.split(" ");
-        for (String part : parts) {
-            System.out.println(" - " + part);
-        }
-        System.out.println();
+    public static void stringdemo() {
+        String name_1 = "leowave";
+        System.out.println(name_1);
+
+        // string methods this seems similar to javascript own
+        System.out.println(name_1.length());
+        System.out.println(name_1.toUpperCase());
+        System.out.println(name_1.toLowerCase());
+        System.out.println(name_1.charAt(0));
+        System.out.println(name_1.contains("t"));
+        System.out.println(name_1.replace("l", "h"));
     }
 
-    // ===== NUMBER METHODS =====
-    public static void numberDemo() {
-        int a = 10;
-        int b = 20;
-        double d = 5.7;
+    public static void numberdemo() {
+        // Primitive number types are divided into two groups:
+        // Integer types, short int long byte
+        // Floating point float double
+        // int myNum = 100;
+        // System.out.println(myNum);
 
-        System.out.println("Integer a: " + a);
-        System.out.println("Integer b: " + b);
-        System.out.println("Max: " + Integer.max(a, b));
-        System.out.println("Min: " + Integer.min(a, b));
-        System.out.println("Sum: " + (a + b));
-        System.out.println("Double d: " + d);
-        System.out.println("Math.round(d): " + Math.round(d));
-        System.out.println("Math.ceil(d): " + Math.ceil(d));
-        System.out.println("Math.floor(d): " + Math.floor(d));
-        System.out.println();
+        // The byte data type can store whole numbers from -128 to 127.
+        byte myNumB = 100;
+        System.out.println(myNumB);
+
+        // The short data type can store whole numbers from -32768 to 32767:
+        short myNum = 5000;
+        System.out.println(myNum);
+
+        // The long data type can store whole numbers from -9223372036854775808 to
+        // 9223372036854775807.
+
+        long myNumL = 15000000000L;
+        System.out.println(myNumL);
+
+        // The int data type can store whole numbers from -2147483648 to 2147483647. In
+        // general, and in our tutorial, the int data type is the preferred data type
+        // when we create variables with a numeric value
+
+        int myNumI = 100000;
+        System.out.println(myNumI);
+
+        // Floating Point Types
+        // You should use a floating point type whenever you need a number with a
+        // decimal, such as 9.99 or 3.14515.
+        float myNumf = 5.75f;
+        System.out.println(myNumf);
+
+        double myNumd = 19.99d;
+        System.out.println(myNumd);
     }
 
-    // ===== BOOLEAN METHODS =====
-    public static void booleanDemo() {
-        boolean flag = true;
-        System.out.println("Boolean flag: " + flag);
-        Boolean boolObj = Boolean.valueOf(flag);
-        System.out.println("Boolean object: " + boolObj);
-        boolean parsed = Boolean.parseBoolean("false");
-        System.out.println("Parsed from string 'false': " + parsed);
-        System.out.println();
-    }
+    public static int add(int a, int b) {
+        return a + b;
 
-    // ===== CHAR METHODS =====
-    public static void charDemo() {
-        char letter = 'A';
-        char digit = '1';
-        System.out.println("Char letter: " + letter);
-        System.out.println("Is letter? " + Character.isLetter(letter));
-        System.out.println("Is digit? " + Character.isDigit(letter));
-        System.out.println("Uppercase of 'a': " + Character.toUpperCase('a'));
-        System.out.println("Lowercase of 'Z': " + Character.toLowerCase('Z'));
-        System.out.println("Is digit? " + Character.isDigit(digit));
-        System.out.println();
     }
 }
